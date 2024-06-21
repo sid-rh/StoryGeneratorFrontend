@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL="/story/";
+const API_URL="https://storygeneratorbackend-1.onrender.com/story/";
 
 const getAllStories=async(payload)=>{
     const response=await axios.post(API_URL+'getAll',payload);
