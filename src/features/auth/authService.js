@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL='https://storygeneratorbackend-1.onrender.com/user/';
+const API_URL=`${process.env.REACT_APP_BASE_URL}/user/`;
 
 const register=async(userData)=>{
     const response=await axios.post(API_URL+'register',userData);
