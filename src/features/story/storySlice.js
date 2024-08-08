@@ -113,7 +113,7 @@ export const storySlice=createSlice({
                 state.isLoading=false
                 state.isSuccess=true
                 state.story=action.payload[0].paginatedresult
-                state.totalCount=action.payload[0].totalcount[0].count
+                state.totalCount=action.payload[0]?.totalcount[0]?.count||0
             })
             .addCase(getAllStories.rejected,(state,action)=>{
                 state.isLoading=false

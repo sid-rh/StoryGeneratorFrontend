@@ -1,6 +1,7 @@
 import axios from 'axios';
 
 const API_URL=`${process.env.REACT_APP_BASE_URL}/story/`;
+axios.defaults.withCredentials = true;
 
 const getAllStories=async(payload)=>{
     const response=await axios.post(API_URL+'getAll',payload);
